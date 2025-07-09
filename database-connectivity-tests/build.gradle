@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    // PostgreSQL
+    implementation 'org.postgresql:postgresql:42.6.0'
+    
+    // MongoDB
+    implementation 'org.mongodb:mongodb-driver-sync:4.10.2'
+    
+    // Testing
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true
+    }
+}

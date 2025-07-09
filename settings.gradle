@@ -1,0 +1,9 @@
+rootProject.name = 'cardekho'
+
+include 'car-catalog-service'
+include 'car-search-service'
+include 'user-service'
+include 'booking-service'
+include 'review-service'
+include 'api-gateway'
+include 'frontend'
