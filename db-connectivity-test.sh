@@ -35,7 +35,7 @@ check_service mongod && {
         if command -v $client >/dev/null; then
             echo "- Using $client client"
             $client --eval "db.runCommand({ ping: 1 }).ok" \
-                mongodb://root:example@localhost:27017/cardekho_users?authSource=admin \
+                mongodb://admin:admin123@localhost:27017/cardekho_users?authSource=admin \
                 2>/dev/null && echo "  [✓] Connection successful" || echo "  [✗] Connection failed"
             break
         fi
